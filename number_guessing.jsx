@@ -1,5 +1,6 @@
 const React = require('react')
 const {Component} = React;
+const {createRef} = React;
 
 class NumberGuessing extends Component {
     state = {
@@ -9,7 +10,7 @@ class NumberGuessing extends Component {
         value:''
     }
 
-}
+
 
 getNumbers = () => {
     const candidate = [1,2,3,4,5,6,7,8,9];
@@ -22,6 +23,9 @@ getNumbers = () => {
     return array;
 
 }
+
+
+inputRef = createRef(); 
 
 onSubmitForm = (e) => {
     const {value, tries, answer} = this.state;
@@ -85,13 +89,11 @@ onChangeInput = (e) => {
     });
 };
 
-inputRef = createRef(); 
 
  render() {
     const {result, value, tries} = this.state;
     return(
         <>
-
         <h1>{result}</h1>
         <form onSubmit={this.onSubmitForm}>
             <input ref={this.inputRef} maxLength={4} value={value} onChange={onChangeInput}/>
@@ -101,12 +103,13 @@ inputRef = createRef();
             {tries.map((v,i)=> {
                 return (
                     <Try key={'${i + 1} Trial : '} tryInfo={V}/>
-                )
+                );
             })}
         </ul>
         </>
     );
 }
 }
+
 
 export default NumberGuessing;

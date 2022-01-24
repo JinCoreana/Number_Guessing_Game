@@ -1,4 +1,5 @@
-import React, { Component } from 'react';
+const React = require('react')
+const {Component} = React;
 
 class Try extends Component {
   render() {
