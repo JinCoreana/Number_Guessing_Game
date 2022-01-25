@@ -1,7 +1,5 @@
-const React = require('react')
-const ReactDom = require('react-dom')
+import ReactDOM from 'react-dom';
+import React from 'react';
+import NumberGuessing from './number_guessing'
 
-const NumberGuessing = require('./number_guessing.jsx')
-
-
-ReactDom.render(<NumberGuessing/>, document.querySelector('#root'))
+ReactDOM.render(<NumberGuessing/>, document.querySelector('#root'))
