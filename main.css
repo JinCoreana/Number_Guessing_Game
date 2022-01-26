@@ -5,42 +5,8 @@
     padding-left: 2rem;
     padding-top: 3rem;
     margin:1rem;
-    width: 20rem;
+    width: 25rem;
     height: 9.5rem;
     margin-left: auto;
-    margin-right: auto;
+    margin-right: auto;}
     
-
-    h1 {
-        font-family:'Mali', cursive;
-        font-weight: 500;
-        color:black;
-        font-size: 1rem;
-    }
-
-    input {
-        border-radius: 0.3rem;
-    }
-
-    button {
-        border-radius: 0.2rem;
-        padding: 0.1rem;
-        cursor: pointer;
-        text-align: center;
-        color: black;
-        background-color: transparent;
-        border: solid 0.1rem;
-        border-top-left-radius: 255px 15px;
-        border-top-right-radius: 15px 225px;
-        border-bottom-right-radius: 225px 15px;
-        border-bottom-left-radius:15px 255px;
-    
-      }
-    
-.result{
-    padding-top: 1rem;
-    font-size: 1rem;
-    font-family:'Permanent Marker', cursive;
-        font-weight: 400;
-    color:white;
-}

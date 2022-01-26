@@ -2,6 +2,7 @@ import React, { Component, createRef } from 'react';
 import Try from './Try';
 
 
+
 function getNumbers() { 
   const candidate = [1,2,3,4,5,6,7,8,9];
   const array = [];
@@ -80,16 +81,28 @@ class NumberGuessing extends Component {
   };
 
   inputRef = createRef(); // this.inputRef
+  
 
   render() {
+    const mystlye = {
+     marginLeft: "154px",
+     paddingTop: "10px"
+    };
+
+    const trialstyle = {
+      backgrondColor: 'white'
+        }
+
     const { result, value, tries } = this.state;
     return (
-      <>
-        <h1>{result}</h1>
+      <div style={mystlye}>
+        <div> Guess 4 digits of number!</div>
+        <div> ◯ = number + position △ = number</div> 
+        <h2>{result}</h2>
         <form onSubmit={this.onSubmitForm}>
           <input ref={this.inputRef} maxLength={4} value={value} onChange={this.onChangeInput} />
         </form>
-        <div>Trial: {tries.length}</div>
+        <div style={trialstyle}>Trial: {tries.length}</div>
         <ul>
           {tries.map((v, i) => {
             return (
@@ -97,7 +110,7 @@ class NumberGuessing extends Component {
             );
           })}
         </ul>
-      </>
+      </div>
     );
   }
 }
