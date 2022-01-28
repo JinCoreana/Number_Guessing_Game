@@ -1,5 +1,6 @@
 const path = require('path');
 const RefreshWebpackPlugin = require('@pmmmwh/react-refresh-webpack-plugin')
+
 module.exports = {
     mode: "development", //actual service? : production
     devtool: "eval", // hidden-source-map
@@ -12,8 +13,8 @@ module.exports = {
     }, //write all files name that you want to combine
     module: {
         rules: [{
-            test: [/\.jsx?$/],
-            loader: ['babel-loader'],
+            test: /\.jsx?$/,
+            loader: 'babel-loader',
             options: {
                 presets: [
                     '@babel/preset-env', '@babel/preset-react'
@@ -24,7 +25,6 @@ module.exports = {
             }
         }]
     },
-
     plugins: [new RefreshWebpackPlugin()],
     output: {
         path: path.join(__dirname, 'dist'),

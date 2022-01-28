@@ -95,7 +95,7 @@ class NumberGuessing extends Component {
 
     const { result, value, tries } = this.state;
     return (
-      <div style={mystlye}>
+      <div className='bubble' style={mystlye}>
         <div> Guess 4 digits of number!</div>
         <div> ◯ = number + position △ = number</div> 
         <h2>{result}</h2>
@@ -103,7 +103,7 @@ class NumberGuessing extends Component {
           <input ref={this.inputRef} maxLength={4} value={value} onChange={this.onChangeInput} />
         </form>
         <div style={trialstyle}>Trial: {tries.length}</div>
-        <ul>
+        <ul className="trial" >
           {tries.map((v, i) => {
             return (
               <Try key={`${i + 1} Trial :`} tryInfo={v} />
