@@ -1,6 +1,6 @@
 # Number_Guessing_Game
 4 Digits number guessing game with 10 chances 
-A simple game components using HTML,CSS and React.
+A simple game component using HTML,CSS and React.
 
 ## Image
   
